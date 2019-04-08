@@ -12,6 +12,10 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'admin');
 
+        $this->publishes([
+            __DIR__ . '/../public' => public_path('vendor/admin'),
+        ], 'admin-assets');
+
         Route::group([
             'middleware' => ['web', 'auth', CheckIsAdmin::class],
             'prefix' => 'admin',

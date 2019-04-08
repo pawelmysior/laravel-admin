@@ -8,12 +8,14 @@
         <title>{{ config('app.name', 'Laravel') }} - Admin</title>
 
         <!-- Styles -->
-        <link href="" rel="stylesheet">
+        <link href="{{ asset(mix('app.css', 'vendor/admin')) }}" rel="stylesheet">
     </head>
     <body>
-        @yield('content')
+        <div id="app">
+            @yield('content')
+        </div>
 
         <!-- Scripts -->
-        <script src=""></script>
+        <script src="{{ asset(mix('app.js', 'vendor/admin')) }}"></script>
     </body>
 </html>
