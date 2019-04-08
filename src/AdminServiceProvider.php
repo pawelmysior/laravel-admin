@@ -10,6 +10,8 @@ class AdminServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'admin');
+
         Route::group([
             'middleware' => ['web', 'auth', CheckIsAdmin::class],
             'prefix' => 'admin',
