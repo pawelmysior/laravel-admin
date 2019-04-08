@@ -1,0 +1,11 @@
+{
+    "name": "pawelmysior/laravel-admin",
+    "description": "Laravel Admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pawel Mysior",
+            "email": "pawelmysior@gmail.com"
+        }
+    ]
+}
