@@ -8,6 +8,7 @@
         <title>{{ config('app.name', 'Laravel') }} - Admin</title>
 
         <!-- Styles -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
         <link href="{{ asset(mix('app.css', 'vendor/admin')) }}" rel="stylesheet">
     </head>
     <body class="font-sans">
