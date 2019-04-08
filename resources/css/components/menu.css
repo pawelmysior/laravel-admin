@@ -1,0 +1,7 @@
+.menu-section-title {
+  @apply leading-none uppercase tracking-wider text-sm text-blue-200 mb-6;
+}
+
+.menu-section-title:not(:first-child) {
+  @apply mt-10;
+}
