@@ -10,7 +10,7 @@
         <!-- Styles -->
         <link href="{{ asset(mix('app.css', 'vendor/admin')) }}" rel="stylesheet">
     </head>
-    <body>
+    <body class="font-sans">
         <div id="app">
             @yield('content')
         </div>
