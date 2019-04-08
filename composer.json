@@ -7,5 +7,20 @@
             "name": "Pawel Mysior",
             "email": "pawelmysior@gmail.com"
         }
-    ]
+    ],
+    "require": {
+        "laravel/framework": "~5.8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PawelMysior\\Admin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PawelMysior\\Admin\\AdminServiceProvider"
+            ]
+        }
+    }
 }
