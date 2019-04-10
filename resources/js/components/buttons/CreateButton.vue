@@ -1,5 +1,5 @@
 <template>
-    <a class="btn btn-low btn-blue" :href="route">
+    <a class="btn btn-low btn-blue" :href="route" v-once>
         <slot>Nowy</slot>
     </a>
 </template>
