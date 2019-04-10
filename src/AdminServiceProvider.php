@@ -19,6 +19,7 @@ class AdminServiceProvider extends ServiceProvider
         Route::group([
             'middleware' => ['web', 'auth', CheckIsAdmin::class],
             'prefix' => 'admin',
+            'as' => 'admin.',
         ], function () {
             Route::namespace('PawelMysior\Admin\Http\Controllers')->group(function () {
                 $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
