@@ -1,0 +1,4 @@
+.panel {
+  @apply rounded bg-white p-8;
+}
+
