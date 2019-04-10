@@ -1,0 +1,25 @@
+.input {
+  @apply appearance-none block w-full
+         border rounded py-3 px-4 mb-3 leading-tight
+         bg-gray-200 border-gray-200 text-gray-900;
+}
+
+.input:focus {
+  @apply outline-none bg-white border-gray-500;
+}
+
+.input.has-error {
+  @apply border-red-500;
+}
+
+.label {
+  @apply block uppercase tracking-wider text-xs font-bold mb-2 text-gray-600;
+}
+
+.label-extra {
+  @apply text-gray-500 normal-case font-normal;
+}
+
+.error {
+  @apply text-red-500 text-xs italic;
+}

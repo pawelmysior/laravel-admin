@@ -10,6 +10,13 @@
         <!-- Styles -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
         <link href="{{ asset(mix('app.css', 'vendor/admin')) }}" rel="stylesheet">
+
+        <script>
+          window.App = @json([
+            'errors' => $errors->toArray(),
+            'oldInput' => session()->getOldInput(),
+          ])
+        </script>
     </head>
     <body class="bg-gray-300 text-gray-900 font-sans">
         <div id="app">
