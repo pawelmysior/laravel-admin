@@ -12,6 +12,7 @@
     "devDependencies": {
         "axios": "^0.18",
         "cross-env": "^5.2",
+        "flatpickr": "^4.5.7",
         "laravel-mix": "^4.0.15",
         "portal-vue": "^2.0.0",
         "tailwindcss": "^1.0.0-beta.4",
