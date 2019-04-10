@@ -4,5 +4,7 @@
 
 @import "components/buttons.css";
 @import "components/menu.css";
+@import "components/page.css";
+@import "components/table.css";
 
 @tailwind utilities;
