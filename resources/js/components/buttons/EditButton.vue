@@ -1,5 +1,5 @@
 <template>
-    <a class="btn btn-low btn-blue-outline" :href="route" v-once>
+    <a :href="route" class="btn btn-low btn-blue-outline" v-once>
         <slot>Edytuj</slot>
     </a>
 </template>
