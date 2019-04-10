@@ -19,7 +19,7 @@
         </script>
     </head>
     <body class="bg-gray-300 text-gray-900 font-sans">
-        <div id="app">
+        <div id="app" v-cloak>
             <div class="flex min-h-screen">
                 <div class="bg-blue-800">
                     <div class="h-full w-48 py-6 px-5 flex flex-col content-between">

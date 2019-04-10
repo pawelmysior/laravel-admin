@@ -10,3 +10,5 @@
 @import "components/table.css";
 
 @tailwind utilities;
+
+@import "shame.css";
