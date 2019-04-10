@@ -1,5 +1,9 @@
 module.exports = {
   theme: {
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      'smoke': 'rgba(0, 0, 0, 0.5)',
+    }),
     fontFamily: {
       sans: [
         'Source Sans Pro',
