@@ -2,6 +2,10 @@
   @apply py-3 px-4 rounded text-xs leading-tight uppercase tracking-wider;
 }
 
+.btn:focus {
+  @apply outline-none;
+}
+
 .btn-low {
   @apply py-2;
 }
