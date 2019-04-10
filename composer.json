@@ -14,7 +14,10 @@
     "autoload": {
         "psr-4": {
             "PawelMysior\\Admin\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
