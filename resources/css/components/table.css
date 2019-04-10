@@ -26,6 +26,6 @@
   @apply text-blue-700;
 }
 
-.table > tbody > tr > td > a:hover {
+.table > tbody > tr > td:not(:last-child) > a:hover {
   @apply underline;
 }
