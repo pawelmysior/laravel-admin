@@ -67,6 +67,24 @@
         media_dimensions: false,
         media_poster: false,
         paste_as_text: true,
+
+        init_instance_callback: function (editor) {
+          editor.on('focus', function (e) {
+            editor.getContainer().classList.add('mce-tinymce-focused');
+          });
+
+          editor.on('blur', function (e) {
+            editor.getContainer().classList.remove('mce-tinymce-focused');
+          });
+        },
+
+        setup(editor) {
+          editor.on('init', () => {
+            if (editor.getElement().classList.contains('has-error')) {
+              editor.getContainer().classList.add('has-error')
+            }
+          });
+        },
       });
     },
   };
