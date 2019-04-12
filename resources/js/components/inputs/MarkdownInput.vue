@@ -50,6 +50,10 @@
       simplemde.codemirror.on('blur', () => {
         document.getElementsByClassName('editor-toolbar')[0].classList.remove('editor-toolbar-focused');
       });
+
+      if (this.$refs.input.classList.contains('has-error')) {
+        document.getElementsByClassName('editor-toolbar')[0].classList.add('has-error');
+      }
     },
   };
 </script>
@@ -74,11 +78,18 @@
 
     .CodeMirror {
         @apply bg-gray-200 border-gray-200 text-gray-900 leading-tight;
-        border-top: 1px solid #d3dbe4;
+        border-top: 1px solid #d3dbe4 !important;
     }
 
     .CodeMirror-focused {
         @apply bg-white border-gray-500;
-        border-top: 1px solid #d3dbe4;
+    }
+
+    .editor-toolbar.has-error {
+        @apply border-red-500;
+    }
+
+    .editor-toolbar.has-error + .CodeMirror {
+        @apply border-red-500;
     }
 </style>
