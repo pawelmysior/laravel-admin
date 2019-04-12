@@ -21,6 +21,7 @@
 <script>
   import axios from 'axios';
   import tinymce from 'tinymce/tinymce';
+  import 'tinymce/plugins/autoresize';
   import 'tinymce/plugins/code';
   import 'tinymce/plugins/image';
   import 'tinymce/plugins/link';
@@ -59,7 +60,7 @@
         keep_styles: false,
         relative_urls: false,
 
-        plugins: 'code image link lists media paste',
+        plugins: 'autoresize code image link lists media paste',
         image_advtab: false,
         image_dimensions: false,
         link_context_toolbar: true,
