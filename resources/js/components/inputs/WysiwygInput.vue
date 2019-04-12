@@ -44,6 +44,9 @@
       tinymce.init({
         target: this.$refs.input,
 
+        language: 'pl',
+        language_url: '/vendor/admin/tinymce/langs/pl.js',
+
         menubar: false,
         min_height: 250,
         skin_url: 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.4/skins/lightgray',
