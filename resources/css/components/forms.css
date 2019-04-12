@@ -12,6 +12,18 @@
   @apply border-red-500;
 }
 
+.input-image {
+  @apply relative bg-gray-200 border rounded mb-3 border-gray-200;
+}
+
+.input-image:hover {
+  @apply opacity-75;
+}
+
+.input-image.has-error {
+  @apply border-red-500;
+}
+
 .label {
   @apply block uppercase tracking-wider text-xs font-bold mb-2 text-gray-600;
 }
