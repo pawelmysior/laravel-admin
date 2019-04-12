@@ -19,6 +19,7 @@
 </template>
 
 <script>
+  import axios from 'axios';
   import tinymce from 'tinymce/tinymce';
   import 'tinymce/plugins/code';
   import 'tinymce/plugins/image';
@@ -67,6 +68,38 @@
         media_dimensions: false,
         media_poster: false,
         paste_as_text: true,
+
+        file_picker_types: 'image',
+        file_picker_callback: function (callback, value, meta) {
+          /*
+           * Create a file input on the fly, click it and listen to changes.
+           * When the file is selected, create a FormData with this file and send it through a POST call.
+           * Get the uploaded file url back and put it into the text input.
+           */
+          if (meta.filetype === 'image') {
+            let fileInput = document.createElement('input');
+            fileInput.setAttribute('type', 'file');
+
+            fileInput.addEventListener('change', (e) => {
+              if (!e.target.files.length) {
+                return false;
+              }
+
+              let formData = new FormData();
+              formData.append('image', e.target.files[0]);
+
+              axios.post('/admin/upload', formData)
+                .then(response => {
+                  callback(response.data);
+                })
+                .catch(error => {
+                  console.log(error);
+                });
+            });
+
+            fileInput.click();
+          }
+        },
 
         init_instance_callback: function (editor) {
           editor.on('focus', function (e) {
