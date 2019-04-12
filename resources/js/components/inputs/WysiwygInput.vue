@@ -115,7 +115,7 @@
         setup(editor) {
           editor.on('init', () => {
             if (editor.getElement().classList.contains('has-error')) {
-              editor.getContainer().classList.add('has-error')
+              editor.getContainer().classList.add('has-error');
             }
           });
         },
