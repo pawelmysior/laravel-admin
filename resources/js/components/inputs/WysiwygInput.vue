@@ -49,7 +49,7 @@
 
         menubar: false,
         min_height: 250,
-        skin_url: 'https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.9.4/skins/lightgray',
+        skin_url: '/vendor/admin/tinymce/skins/laravel-admin',
         statusbar: false,
         toolbar: 'removeformat | bold italic underline | blockquote | alignleft aligncenter alignright alignjustify | bullist numlist | link image media | code',
 
