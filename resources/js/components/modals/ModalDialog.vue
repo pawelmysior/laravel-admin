@@ -1,6 +1,6 @@
 <template>
     <portal to="modals" v-if="show">
-        <div class="fixed inset-0 bg-smoke flex">
+        <div class="fixed z-10 inset-0 bg-smoke flex">
             <div class="bg-white p-8 rounded w-full max-w-lg m-auto shadow-md">
                 <slot></slot>
             </div>
