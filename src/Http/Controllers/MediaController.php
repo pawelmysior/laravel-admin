@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class MediaController extends Controller
 {
-    public function fetch(Request $request): string
+    public function fetch(Request $request): ?string
     {
         $modelType = $this->getModelType($request->input('model_type'));
 
