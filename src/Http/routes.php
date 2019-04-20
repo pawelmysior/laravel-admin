@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return 'Hello World!';
-});
+Route::view('/', 'admin::home');
 
 Route::post('/media/fetch', 'MediaController@fetch');
 Route::post('/media', 'MediaController@store');
