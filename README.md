@@ -1,4 +1,4 @@
-# Laravel Alpha
+# Laravel Admin
 
 ## License
 
