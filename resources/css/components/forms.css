@@ -24,6 +24,16 @@
   @apply border-red-500;
 }
 
+.input-file {
+  @apply block w-full
+         border rounded rounded-r-none py-3 px-4 leading-tight
+         bg-gray-200 border-gray-200 text-gray-900;
+}
+
+.input-file:hover {
+  @apply underline;
+}
+
 .label {
   @apply block uppercase tracking-wider text-xs font-bold mb-2 text-gray-600;
 }
