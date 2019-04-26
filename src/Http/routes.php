@@ -4,5 +4,6 @@ Route::view('/', 'admin::home');
 
 Route::post('/media/fetch', 'MediaController@fetch');
 Route::post('/media', 'MediaController@store');
+Route::post('/media/delete', 'MediaController@destroy');
 
 Route::post('/upload', 'UploadController@store');

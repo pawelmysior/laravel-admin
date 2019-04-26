@@ -18,7 +18,7 @@
                 v-show="url || old"
             ></a>
 
-            <div class="relative btn btn-gray cursor-pointer flex items-center" :class="{ 'rounded-l-none': url }">
+            <button class="relative btn btn-gray flex items-center" :class="{ 'rounded-l-none': url }" type="button">
                 <input
                     class="absolute w-full inset-0 cursor-pointer opacity-0"
                     type="file"
@@ -26,7 +26,16 @@
                 >
 
                 <div class="whitespace-no-wrap">Dodaj plik</div>
-            </div>
+            </button>
+
+            <button
+                class="btn btn-transparent whitespace-no-wrap"
+                type="button"
+                v-show="url"
+                @click="remove"
+            >
+                Usuń plik
+            </button>
 
             <input
                 :name="name"
@@ -91,6 +100,20 @@
           })
           .catch(error => {
             console.log(error);
+          });
+      },
+      remove() {
+        axios
+          .post('/admin/media/delete', {
+            model_type: this.modelType,
+            model_id: this.modelId,
+            collection: this.collection,
+          })
+          .then(response => {
+            this.url = '';
+          })
+          .catch(error => {
+            //
           });
       },
       createFormData(file) {

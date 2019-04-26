@@ -42,6 +42,15 @@ class MediaController extends Controller
         return $media->getFullUrl();
     }
 
+    public function destroy(Request $request): void
+    {
+        $modelType = $this->getModelType($request->input('model_type'));
+
+        $model = $modelType::findOrFail($request->input('model_id'));
+
+        $model->clearMediaCollection($request->input('collection'));
+    }
+
     protected function storeTemporaryFile(UploadedFile $file): string
     {
         return Storage::disk(config('medialibrary.disk_name'))->url($file->store('temp', config('medialibrary.disk_name')));
