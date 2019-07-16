@@ -1,4 +1,10 @@
 .panel {
-  @apply rounded bg-white p-8;
+  @apply rounded bg-white p-3;
+}
+
+@screen xl {
+  .panel {
+    @apply p-8;
+  }
 }
 

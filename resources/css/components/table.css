@@ -1,13 +1,14 @@
 .table {
-  @apply w-full rounded bg-white;
+  @apply w-full rounded bg-white overflow-x-scroll text-sm;
+  display: block !important; /* overwrite tailwindcss .table { display: table; } utility */
 }
 
 .table > thead > tr {
   @apply border-b-2;
 }
 
-.table > thead > tr >th {
-  @apply px-8 py-3 text-left font-normal uppercase tracking-wider text-sm text-gray-500;
+.table > thead > tr > th {
+  @apply px-3 py-2 text-xs text-left font-normal uppercase tracking-wider text-gray-500;
 }
 
 .table > tbody > tr:not(:last-child) {
@@ -15,17 +16,36 @@
 }
 
 .table > tbody > tr > td {
-  @apply px-8 py-4;
+  @apply px-3 py-2;
+}
+
+.table > tbody > tr > td {
+  @apply whitespace-no-wrap;
 }
 
 .table > tbody > tr > td:not(:first-child) {
-  @apply w-px whitespace-no-wrap;
+  @apply w-px;
 }
 
-.table > tbody > tr > td > a {
+.table > tbody > tr > td:not(:last-child) > a {
   @apply text-blue-700;
 }
 
 .table > tbody > tr > td:not(:last-child) > a:hover {
   @apply underline;
+}
+
+@screen xl {
+  .table {
+    @apply text-base;
+    display: table !important;
+  }
+
+  .table > thead > tr > th {
+    @apply px-8 py-3 text-sm;
+  }
+
+  .table > tbody > tr > td {
+    @apply px-8 py-4;
+  }
 }

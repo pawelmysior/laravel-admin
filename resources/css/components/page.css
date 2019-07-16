@@ -1,7 +1,13 @@
 .page-title {
-  @apply flex items-center mb-6 text-2xl;
+  @apply flex items-center mb-4 text-lg;
 }
 
 .page-title > a {
   @apply ml-4;
+}
+
+@screen xl {
+  .page-title {
+    @apply mb-6 text-2xl;
+  }
 }

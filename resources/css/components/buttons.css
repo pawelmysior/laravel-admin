@@ -1,5 +1,5 @@
 .btn {
-  @apply py-3 px-4 rounded text-xs leading-tight uppercase tracking-wider;
+  @apply py-2 px-3 rounded text-xs leading-tight uppercase tracking-wider whitespace-no-wrap;
 }
 
 .btn:focus {
@@ -7,7 +7,7 @@
 }
 
 .btn-low {
-  @apply py-2;
+  @apply py-1 px-2;
 }
 
 .btn-blue {
@@ -44,4 +44,14 @@
 
 .btn-transparent:hover {
   @apply text-gray-900;
+}
+
+@screen xl {
+  .btn {
+    @apply py-3 px-4;
+  }
+
+  .btn-low {
+    @apply py-2 px-4;
+  }
 }
