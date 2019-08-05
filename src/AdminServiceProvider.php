@@ -17,15 +17,20 @@ class AdminServiceProvider extends ServiceProvider
         ], 'admin-assets');
 
         Route::group([
-            'middleware' => ['web', 'auth', CheckIsAdmin::class],
             'prefix' => 'admin',
             'as' => 'admin.',
+            'middleware' => 'web',
         ], function () {
-            Route::namespace('PawelMysior\Admin\Http\Controllers')->group(function () {
+            Route::group([
+                'namespace' => 'PawelMysior\Admin\Http\Controllers',
+            ], function () {
                 $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
             });
 
-            Route::namespace('App\Http\Controllers\Admin')->group(function () {
+            Route::group([
+                'namespace' => 'App\Http\Controllers\Admin',
+                'middleware' => ['auth', CheckIsAdmin::class],
+            ], function () {
                 $this->loadRoutesFrom(base_path('routes/admin.php'));
             });
         });

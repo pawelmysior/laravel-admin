@@ -1,5 +1,10 @@
 module.exports = {
   theme: {
+    extend: {
+      width: {
+        96: '24rem',
+      },
+    },
     backgroundColor: theme => ({
       ...theme('colors'),
       'smoke': 'rgba(0, 0, 0, 0.5)',
