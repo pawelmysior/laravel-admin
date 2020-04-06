@@ -31,7 +31,9 @@ class AdminServiceProvider extends ServiceProvider
                 'namespace' => 'App\Http\Controllers\Admin',
                 'middleware' => ['auth', CheckIsAdmin::class],
             ], function () {
-                $this->loadRoutesFrom(base_path('routes/admin.php'));
+                if (file_exists(base_path('routes/admin.php'))) {
+                    $this->loadRoutesFrom(base_path('routes/admin.php'));
+                }
             });
         });
     }
