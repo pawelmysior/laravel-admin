@@ -4,7 +4,7 @@
             Czy na pewno?
         </h1>
 
-        <p class="text-center text-grey-darker mb-6">
+        <p class="text-center text-gray-700 mb-6">
             Tej operacji nie można cofnąć!
         </p>
 
