@@ -26,5 +26,6 @@
 
         <!-- Scripts -->
         <script src="{{ asset(mix('app.js', 'vendor/admin')) }}"></script>
+        @stack('scripts')
     </body>
 </html>
