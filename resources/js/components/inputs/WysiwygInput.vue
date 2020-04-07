@@ -55,6 +55,9 @@
         statusbar: false,
         toolbar: 'removeformat | bold italic underline | blockquote | alignleft aligncenter alignright alignjustify | bullist numlist | link image media | code',
 
+        body_class: 'content',
+        content_css : '/css/content.css',
+
         element_format: 'html',
         entity_encoding: 'raw',
         keep_styles: false,
@@ -102,21 +105,21 @@
           }
         },
 
-        init_instance_callback: function (editor) {
-          editor.on('focus', function (e) {
-            editor.getContainer().classList.add('mce-tinymce-focused');
-          });
-
-          editor.on('blur', function (e) {
-            editor.getContainer().classList.remove('mce-tinymce-focused');
-          });
-        },
+        init_instance_callback : "onWysiwygInit",
 
         setup(editor) {
           editor.on('init', () => {
             if (editor.getElement().classList.contains('has-error')) {
               editor.getContainer().classList.add('has-error');
             }
+
+            editor.on('focus', function (e) {
+              editor.getContainer().classList.add('mce-tinymce-focused');
+            });
+
+            editor.on('blur', function (e) {
+              editor.getContainer().classList.remove('mce-tinymce-focused');
+            });
           });
         },
       });
